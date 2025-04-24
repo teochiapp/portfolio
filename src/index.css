@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #1C1C1C;
+  --secondary-color: #FF6F61;
+  --background-color: #1C1C1C;
+  --text-color: white;
+  --heading-font: "Saira", sans-serif;
+  --text-font: "Mulish";
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-family: "Mulish";
+}
+
+#fp-nav ul li .fp-tooltip {
+  font-family: var(--text-font) !important;
+}
+
+#contact-menu > ul > li {
+  font-family: "Mulish";
+}
