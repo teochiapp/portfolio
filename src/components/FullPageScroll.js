@@ -14,6 +14,7 @@ import { Fade } from "react-awesome-reveal";
 function FullPageScroll() {
   const [logoText, setLogoText] = useState("Teo Chiappero");
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
+  const [showLogo, setShowLogo] = useState(true);
   const [currentSection, setCurrentSection] = useState("Home");
   const fullpageRef = useRef(null);
 
