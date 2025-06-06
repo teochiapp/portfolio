@@ -1,6 +1,23 @@
 const projects = [
   {
     id: 2,
+    title: "Vinotipia",
+    description: "Wine – Taster Kit",
+    previewImg: "/images/previewSites/vinotipia.png",
+    url: "https://www.vinotipia.com/",
+    logo: "/images/logos/vinotipia.png",
+    github: "https://github.com/teochiapp/vinotipia",
+    images: [
+      { src: "/images/vinotipia/imagen1.png" },
+      { src: "/images/vinotipia/imagen2.png" },
+      { src: "/images/vinotipia/imagen3.png" },
+      { src: "/images/vinotipia/imagen4.png" },
+      { src: "/images/vinotipia/imagen5.png" },
+      { src: "/images/vinotipia/imagen6.png" },
+    ],
+  },
+  {
+    id: 2,
     title: "Joycof MakeUp",
     description: "Event Makeup Artist – Professional Services",
     previewImg: "/images/previewSites/joycof.png",

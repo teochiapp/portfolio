@@ -11,18 +11,21 @@ function HeroScreen() {
           </Title>
 
           <Subtitle>
-            I like to craft solid and scalable frontend products with great user
-            experiences.
+            I'm a frontend developer who loves building intuitive, scalable web
+            experiences. From freelance work to internship projects, I've
+            delivered clean and accessible solutions tailored to real-world
+            needs, combining solid technical skills with attention to detail and
+            design.
           </Subtitle>
 
           <FeatureGrid>
             <Feature>
-              Highly skilled at progressive enhancement, design systems & UI
-              Engineering.
+              Skilled in crafting responsive and accessible interfaces with
+              clean, maintainable code.
             </Feature>
             <Feature>
-              Proven experience building successful products for clients across
-              several countries.
+              Successfully delivered tailored web solutions to clients from
+              diverse sectors.
             </Feature>
           </FeatureGrid>
         </LeftColumn>
@@ -105,7 +108,7 @@ const FeatureGrid = styled.div`
 
 const Feature = styled.p`
   flex: 1;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--secondary-color);
 `;
 

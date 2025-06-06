@@ -6,6 +6,7 @@ import {
   faGithub,
   faLinkedin,
   faInstagram,
+  faWhatsapp, // 👈 agregado
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
@@ -20,7 +21,10 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Send WhatsApp message
+            Send WhatsApp message{" "}
+            <WhatsAppIcon>
+              <FontAwesomeIcon icon={faWhatsapp} />
+            </WhatsAppIcon>
           </a>
         </Left>
         <Right>
@@ -85,11 +89,14 @@ const TopSection = styled.div`
   margin-bottom: 40px;
 
   a {
-    display: block;
+    display: flex !important;
     margin: 5px 0;
     color: var(--primary-color);
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
+        display: block;
+    gap: 10px;
+    align-items: center;
 
     &:hover {
       text-decoration: underline;
@@ -98,7 +105,7 @@ const TopSection = styled.div`
 `;
 
 const Label = styled.div`
-  font-size: 1.3rem;
+  font-size: 1.9rem;
   color: white;
   margin-bottom: 10px;
   letter-spacing: 2px;
@@ -135,7 +142,7 @@ const BottomSection = styled.div`
 `;
 
 const Copy = styled.div`
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 `;
 
 const SocialIcons = styled.div`
@@ -143,11 +150,15 @@ const SocialIcons = styled.div`
   gap: 20px;
 
   a {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
     color: var(--primary-color);
 
     &:hover {
       color: #fff;
     }
   }
+`;
+
+const WhatsAppIcon = styled.span`
+  font-size: 2.4rem;
 `;

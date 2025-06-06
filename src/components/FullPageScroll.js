@@ -14,8 +14,7 @@ import { Fade } from "react-awesome-reveal";
 function FullPageScroll() {
   const [logoText, setLogoText] = useState("Teo Chiappero");
   const [isContactMenuOpen, setIsContactMenuOpen] = useState(false);
-  const [showLogo, setShowLogo] = useState(true);
-  const [currentSection, setCurrentSection] = useState("Home"); // nuevo estado
+  const [currentSection, setCurrentSection] = useState("Home");
   const fullpageRef = useRef(null);
 
   useEffect(() => {
@@ -29,13 +28,7 @@ function FullPageScroll() {
 
       onLeave: (origin, destination, direction) => {
         const anchor = destination.anchor;
-        setCurrentSection(anchor); // actualizamos sección actual
-
-        if (anchor !== "About") {
-          setShowLogo(true);
-        } else {
-          setShowLogo(false);
-        }
+        setCurrentSection(anchor);
 
         setLogoText("Teo Chiappero");
       },
@@ -46,11 +39,11 @@ function FullPageScroll() {
     };
   }, []);
 
-  const isDarkSection = currentSection === "MyWorks"; // define si es fondo oscuro
+  const isDarkSection = ["About", "Footer"].includes(currentSection);
 
   return (
     <>
-      {showLogo && <LogoOverlay>{logoText}</LogoOverlay>}
+      {showLogo && <LogoOverlay isDark={isDarkSection}>{logoText}</LogoOverlay>}
 
       <MenuToggle
         type="button"
@@ -99,8 +92,6 @@ function FullPageScroll() {
 
 export default FullPageScroll;
 
-// Styled Components
-
 const FullPageContainer = styled.div`
   color: white;
   font-family: Mulish;
@@ -115,7 +106,7 @@ const LogoOverlay = styled.h2`
   font-style: normal;
   font-size: 2.6rem;
   font-weight: bold;
-  color: var(--secondary-color);
+  color: ${({ isDark }) => (isDark ? "#000" : "var(--secondary-color)")};
   transition: all 0.3s ease;
 `;
 

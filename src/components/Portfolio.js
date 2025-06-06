@@ -116,7 +116,7 @@ const OptionsContainer = styled.div`
   align-items: stretch;
   overflow: hidden;
   width: 100%;
-  max-width: 1200px;
+  max-width: 96vw;
   height: 28vw;
 `;
 
@@ -131,8 +131,9 @@ const Option = styled.div`
   cursor: pointer;
   border-radius: ${({ active }) => (active ? "40px" : "30px")};
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
-  flex-grow: ${({ active }) => (active ? 10000 : 1)};
+  flex-grow: ${({ active }) => (active ? 6 : 1)};
   max-width: ${({ active }) => (active ? "600px" : "unset")};
+
   margin: ${({ active }) => (active ? "0" : "10px")};
 
   .shadow {
